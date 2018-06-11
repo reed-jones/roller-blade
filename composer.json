@@ -1,0 +1,24 @@
+{
+    "name": "reed-jones/roller-blade",
+    "description": "A collection on custom blade directives that I find useful",
+    "version": "0.0.1",
+    "keywords": ["laravel", "blade"],
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Reed Jones",
+            "email": "reedjones@reedjones.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "ReedJones\\RollerBlade\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [ "ReedJones\\RollerBlade\\RollerBladeServiceProvider" ]
+        }
+    }
+}
