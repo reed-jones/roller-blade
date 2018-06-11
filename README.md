@@ -14,7 +14,14 @@ Tested on Laravel 5.6+
 | `@css('https://fonts.googleapis.com/css?family=Raleway:100,600')` | `<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css" >` | Links stylesheet (Could be internal, like js example)
 
 ## Installation
-```zsh
-composer require reed-jones/roller-blade
-php artisan view:clear
+1. Add `"@php artisan view:clear"` to your "post-dump-autoload" script in your projects composer.json. It should be the last line, right after `"@php artisan package:discover"`.
+```json
+"post-autoload-dump": [
+  "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+  "@php artisan package:discover",
+  "@php artisan view:clear"
+]
 ```
+2. `composer require reed-jones/roller-blade`
+
+If you would prefer not to add the `view:clear` command to your composer.json file, you can simply run `php artisan view:clear` after installing (and updating, and uninstalling).
