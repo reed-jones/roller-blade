@@ -20,5 +20,16 @@
         "laravel": {
             "providers": [ "ReedJones\\RollerBlade\\RollerBladeServiceProvider" ]
         }
+    },
+    "scripts": {
+        "post-package-install": [
+            "php artisan view:clear"
+        ],
+        "post-package-update": [
+            "php artisan view:clear"
+        ],
+        "post-package-uninstall": [
+            "php artisan view:clear"
+        ]
     }
 }
