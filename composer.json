@@ -23,13 +23,13 @@
     },
     "scripts": {
         "post-package-install": [
-            "php artisan view:clear"
+            "@php artisan view:clear"
         ],
         "post-package-update": [
-            "php artisan view:clear"
+            "@php artisan view:clear"
         ],
         "post-package-uninstall": [
-            "php artisan view:clear"
+            "@php artisan view:clear"
         ]
     }
 }
