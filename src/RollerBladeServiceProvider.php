@@ -16,7 +16,7 @@ class RollerBladeServiceProvider extends ServiceProvider
     {
         // create Vuejs entry div
         Blade::directive('app', function () {
-            return "<?= '<div id=\'app\'></div>'; ?>";
+            return "<?= '<div id=\"app\"></div>'; ?>";
         });
 
         Blade::directive('title', function ($title) {
@@ -25,17 +25,17 @@ class RollerBladeServiceProvider extends ServiceProvider
 
         // include js file
         Blade::directive('js', function ($script) {
-            return "<?= '<script defer src=' . e({$script}) . '></script>'; ?>";
+            return "<?= '<script defer src=\"' . e({$script}) . '\"></script>'; ?>";
         });
 
         // include css script
         Blade::directive('css', function ($link) {
-            return "<?= '<link href=' . e({$link}) . ' rel=\"stylesheet\" type=\"text/css\" >'; ?>";
+            return "<?= '<link href=\"' . e({$link}) . '\" rel=\"stylesheet\" type=\"text/css\" >'; ?>";
         });
 
         // css dns-prefetch
         Blade::directive('dnsPrefetch', function ($link) {
-            return "<?= '<link href=' . e({$link}) . ' rel=\"dns-prefetch\" >'; ?>";
+            return "<?= '<link href=\"' . e({$link}) . '\" rel=\"dns-prefetch\" >'; ?>";
         });
     }
 
